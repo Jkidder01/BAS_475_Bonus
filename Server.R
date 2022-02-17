@@ -6,7 +6,7 @@ server <- function(input, output) {
     y <- SURVEY10[,input$Desired_Y_Var]
     plot(x,y)
     
-    reg_line <- lm(x~y,data=SURVEY10)
+    reg_line <- lm(y~x,data=SURVEY10)
     
     abline(reg_line,col='red')
   })
